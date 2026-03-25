@@ -33,11 +33,23 @@ body {
 
   backdrop-filter: blur(20px);
   background: rgba(255,255,255,0.5);
+
+  .navbar .btn-primary {
+  padding: 8px 14px;
+  font-size: 0.9rem;
+}
 }
 
 .navbar nav a {
   margin: 0 20px;
   color: var(--text-secondary);
+}
+  .menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 /* HERO (IMPORTANTE) */
@@ -273,12 +285,38 @@ body {
 @media (max-width: 600px) {
 
   .navbar {
-    padding: 15px 20px;
-  }
+  position: relative;
+}
 
-  .navbar nav {
-    display: none; /* simplificamos navbar */
-  }
+.nav-links {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+
+  background: white;
+  padding: 20px;
+  border-radius: 1rem;
+
+  width: 200px;
+}
+
+.nav-links a {
+  margin: 10px 0;
+}
+
+.nav-links.active {
+  display: flex;
+}
+
+.menu-toggle {
+  display: block;
+}
+
+.navbar .btn-primary {
+  display: none;
+}
 
   .hero {
     padding: 60px 20px;
@@ -327,4 +365,5 @@ body {
   .footer {
     padding: 40px 20px;
   }
+
 }
