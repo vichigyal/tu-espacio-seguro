@@ -2,10 +2,11 @@
   --surface: #f7faf9;
   --surface-low: #f1f4f3;
   --surface-lowest: #ffffff;
-  --surface-high: #e6e9e8;
 
   --primary: #006565;
   --primary-container: #008080;
+
+  --secondary-container: #d3e4f8;
 
   --tertiary: #70469a;
 
@@ -13,104 +14,187 @@
   --text-secondary: #3e4949;
 }
 
-body {
+/* RESET */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   background: var(--surface);
   font-family: 'Inter', sans-serif;
   color: var(--text-main);
 }
 
-/* NAVBAR GLASS */
+/* NAVBAR (glassmorphism) */
 .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 60px;
+
   backdrop-filter: blur(20px);
   background: rgba(255,255,255,0.6);
-  padding: 20px;
   position: sticky;
   top: 0;
 }
 
-/* HERO */
-.hero {
-  padding: 100px 40px;
-  text-align: center;
-  background: linear-gradient(135deg, var(--primary), var(--primary-container));
-  color: white;
-  border-radius: 0 0 2rem 2rem;
-}
-
-.hero h2 {
-  font-family: 'Manrope';
-  font-size: 2.5rem;
-}
-
-/* BUTTON */
-.btn-primary {
-  background: linear-gradient(135deg, var(--primary), var(--primary-container));
-  border: none;
-  padding: 15px;
-  border-radius: 1.5rem;
-  color: white;
+.navbar nav a {
+  margin: 0 15px;
+  color: var(--text-secondary);
   cursor: pointer;
 }
 
-/* CARDS */
-.cards {
-  display: flex;
-  gap: 40px;
-  padding: 60px;
-  justify-content: center;
+.logo {
+  font-family: 'Manrope';
+  font-weight: 700;
 }
 
-.card {
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 60px;
+  gap: 60px;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  font-family: 'Manrope';
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+.hero-text h1 span {
+  color: var(--primary);
+}
+
+.hero-text p {
+  margin-top: 20px;
+  color: var(--text-secondary);
+}
+
+.badge {
+  display: inline-block;
+  background: var(--surface-low);
+  padding: 8px 15px;
+  border-radius: 999px;
+  margin-bottom: 15px;
+}
+
+/* HERO IMAGE */
+.hero-img img {
+  width: 400px;
+  border-radius: 2rem;
+}
+
+/* BUTTONS */
+.btn-primary {
+  margin-top: 20px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 1.5rem;
+  color: white;
+  cursor: pointer;
+  background: linear-gradient(135deg, var(--primary), var(--primary-container));
+}
+
+.btn-secondary {
+  margin-left: 10px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 1.5rem;
+  background: var(--secondary-container);
+  color: var(--text-main);
+  cursor: pointer;
+}
+
+/* BENEFITS */
+.benefits {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px;
+  background: var(--surface-low);
+  font-size: 0.9rem;
+}
+
+/* STEPS */
+.steps {
+  padding: 80px 60px;
+  text-align: center;
+}
+
+.steps h2 {
+  font-family: 'Manrope';
+  font-size: 2rem;
+}
+
+.step-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.step {
   background: var(--surface-lowest);
-  padding: 20px;
+  padding: 30px;
   border-radius: 1.5rem;
   width: 250px;
 }
 
-.card img {
-  width: 100%;
-  border-radius: 1.5rem;
+.icon {
+  font-size: 30px;
+  margin-bottom: 10px;
 }
 
-/* TAGS */
-.tag {
-  padding: 5px 10px;
-  border-radius: 999px;
-  display: inline-block;
-  margin-top: 10px;
+/* TESTIMONIALS */
+.testimonials {
+  padding: 80px 60px;
 }
 
-.gyne {
-  background: #93f2f2;
-}
-
-.psy {
-  background: #f0dbff;
-}
-
-/* FORM */
-.form-section {
-  background: var(--surface-low);
-  padding: 80px 40px;
-}
-
-.form {
-  max-width: 400px;
-  margin: auto;
+.testimonial-grid {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
+  gap: 30px;
+  margin-top: 40px;
 }
 
-input, select {
-  padding: 12px;
-  border: none;
-  background: var(--surface-low);
-  border-radius: 1rem;
-}
-
-input:focus, select:focus {
+.card {
   background: var(--surface-lowest);
-  outline: none;
+  padding: 25px;
+  border-radius: 1.5rem;
+  flex: 1;
+}
+
+.card.highlight {
+  background: var(--tertiary);
+  color: white;
+}
+
+/* CTA */
+.cta {
+  margin: 80px 60px;
+  padding: 60px;
+  border-radius: 2rem;
+  text-align: center;
+  color: white;
+  background: linear-gradient(135deg, #2b1b1b, #000000);
+}
+
+.cta h2 {
+  font-family: 'Manrope';
+  font-size: 2rem;
+}
+
+/* FOOTER */
+.footer {
+  background: var(--surface-low);
+  padding: 60px;
+  display: flex;
+  justify-content: space-between;
 }
