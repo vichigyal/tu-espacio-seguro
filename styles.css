@@ -316,4 +316,35 @@ body {
     padding: 40px 20px;
   }
 
+/* =========================
+   FIX GRID DESKTOP
+========================= */
+@media (min-width: 1024px) {
+
+  /* HERO (más balanceado) */
+  .hero {
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+
+  /* BENEFITS */
+  .benefits {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    text-align: center;
+  }
+
+  /* STEPS */
+  .step-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+
+  /* TESTIMONIOS (por si acaso ya lo tienes distinto) */
+  .testimonial-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
 }
