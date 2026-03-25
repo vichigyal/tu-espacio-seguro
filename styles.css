@@ -166,8 +166,14 @@ body {
 
 .card {
   background: white;
-  padding: 20px;
+  padding: 25px;
   border-radius: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-height: 160px;
 }
 
 .highlight {
