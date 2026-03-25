@@ -160,8 +160,8 @@ body {
 
 .testimonial-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
 }
 
 .card {
