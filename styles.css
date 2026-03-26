@@ -193,10 +193,36 @@ body {
 
 /* FOOTER */
 .footer {
-  padding: 60px;
-  display: flex;
-  justify-content: space-between;
+  padding: 80px 60px;
   background: var(--surface);
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+
+  align-items: stretch; /* CLAVE */
+  text-align: center;
+  border-top: 1px solid rgba(0,0,0,0.05)
+}
+
+.footer div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  min-height: 120px; /* CLAVE para igualar altura */
+}
+
+.footer h3,
+.footer h4 {
+  font-family: 'Manrope';
+}
+
+.footer p {
+  color: var(--text-soft);
+  font-size: 0.95rem;
+  max-width: 220px;
 }
 
 /* =========================
@@ -303,25 +329,10 @@ body {
   }
 
   .footer {
-  padding: 60px;
-  background: var(--surface);
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
+  }
 
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-
-  text-align: center;
-}
-.footer div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-.footer p {
-  color: var(--text-soft);
-  font-size: 0.95rem;
-}
 }
 
 /* =========================
