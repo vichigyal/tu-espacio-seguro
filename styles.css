@@ -227,52 +227,46 @@ body {
   background: var(--surface);
 }
 
-/* STEPS */
-.steps {
-  padding: 100px 60px;
-  text-align: center;
-}
-
-.steps h2 {
-  margin-bottom: 60px;
-}
-
-/* GRID en fila */
-.step-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-}
-
-/* CARD */
 .step {
   background: white;
-  padding: 30px 25px;
+  padding: 40px 25px 30px;
   border-radius: 1.5rem;
   text-align: center;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   position: relative;
 }
 
-/* NUMERACIÓN */
+/* NÚMERO (más visible sí o sí) */
 .step::before {
   content: attr(data-step);
   position: absolute;
-  top: -15px;
+  top: -18px;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--primary);
+  background: linear-gradient(135deg, var(--primary), var(--primary2));
   color: white;
-  font-size: 0.8rem;
-  padding: 6px 12px;
-  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-/* HOVER PRO */
+/* HOVER (más notorio) */
 .step:hover {
-  transform: translateY(-6px) scale(1.03);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.12);
+}
+
+/* ICONO un poco más grande */
+.step .icon {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
 }
 
 
