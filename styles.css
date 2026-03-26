@@ -637,5 +637,49 @@ body {
     align-items: flex-start;
   }
 
+/* =========================
+   DESKTOP SPACING FIX
+========================= */
+@media (min-width: 1024px) {
+
+  /* HERO menos gigante */
+  .hero {
+    padding: 100px 80px;
+  }
+
+  /* SECCIONES GENERALES */
+  .steps,
+  .testimonials {
+    padding: 100px 80px;
+  }
+
+  /* BENEFITS más compacto */
+  .benefits {
+    padding: 60px 80px;
+    gap: 40px;
+  }
+
+  /* GRID menos separado */
+  .step-grid {
+    gap: 40px;
+    margin-top: 40px;
+  }
+
+  .testimonial-grid {
+    gap: 30px;
+  }
+
+  /* CTA más cerca */
+  .cta {
+    margin: 100px 80px;
+    padding: 80px;
+  }
+
+  /* FOOTER más compacto */
+  .footer {
+    padding: 80px;
+    gap: 40px;
+  }
+
 }
 }
