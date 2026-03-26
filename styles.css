@@ -157,6 +157,8 @@ body {
 .btn-secondary {
   cursor: pointer;
   transition: all 0.25s ease;
+  text-decoration: none; /* 🔥 quita subrayado */
+  color: inherit; /* 🔥 evita color azul link */
 }
 
 .btn-primary {
