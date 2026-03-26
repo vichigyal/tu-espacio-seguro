@@ -119,6 +119,8 @@ body {
 }
 
 .hero-img img {
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
   width: 100%;
   border-radius: 2rem;
   transform: rotate(-3deg);
