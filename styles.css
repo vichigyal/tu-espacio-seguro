@@ -524,4 +524,118 @@ body {
   .hero-img img:hover {
     transform: rotate(0deg) scale(1.03);
   }
+  /* =========================
+   DESKTOP PRO (STITCH STYLE)
+========================= */
+@media (min-width: 1024px) {
+
+  /* HERO MÁS EDITORIAL */
+  .hero {
+    grid-template-columns: 1.1fr 0.9fr;
+    padding: 140px 80px;
+    gap: 100px;
+    align-items: center;
+  }
+
+  .hero-text {
+    max-width: 520px;
+  }
+
+  .hero h1 {
+    font-size: 4rem;
+    line-height: 1.05;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+    max-width: 420px;
+  }
+
+  /* IMAGEN MÁS PRO */
+  .hero-img img {
+    transform: rotate(-4deg) scale(1);
+    border-radius: 2rem;
+  }
+
+  .hero-img img:hover {
+    transform: rotate(0deg) scale(1.04);
+  }
+
+  /* FLOATING CARD MÁS PREMIUM */
+  .floating-card {
+    bottom: -30px;
+    left: 60px;
+    padding: 14px 20px;
+    border-radius: 1.5rem;
+  }
+
+  /* BENEFITS COMO BLOQUES LIMPIOS */
+  .benefits {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px;
+    padding: 80px;
+    text-align: left;
+  }
+
+  .benefits div {
+    font-size: 0.95rem;
+  }
+
+  /* STEPS MÁS EDITORIAL */
+  .steps {
+    padding: 140px 80px;
+    text-align: left;
+  }
+
+  .step-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    margin-top: 60px;
+  }
+
+  .step {
+    background: white;
+    padding: 30px;
+    border-radius: 1.5rem;
+  }
+
+  /* TESTIMONIOS MÁS LIMPIOS */
+  .testimonials {
+    padding: 140px 80px;
+  }
+
+  .testimonial-grid {
+    gap: 40px;
+  }
+
+  .card {
+    border-radius: 1.5rem;
+    padding: 30px;
+  }
+
+  /* CTA MÁS IMPACTANTE */
+  .cta {
+    margin: 140px 80px;
+    padding: 100px;
+    border-radius: 2.5rem;
+  }
+
+  .cta h2 {
+    font-size: 2.5rem;
+  }
+
+  /* FOOTER MÁS PRO */
+  .footer {
+    padding: 100px 80px;
+    gap: 60px;
+    text-align: left;
+  }
+
+  .footer div {
+    align-items: flex-start;
+  }
+
+}
 }
