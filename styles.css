@@ -242,6 +242,32 @@ body {
   justify-content: space-around;
   margin-top: 40px;
 }
+.step {
+  position: relative;
+  padding-top: 20px;
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--primary2));
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  margin: 0 auto 10px;
+  font-size: 1rem;
+}
+.steps h2,
+.testimonials h2 {
+  font-family: 'Manrope';
+  font-size: 2rem;
+  letter-spacing: -0.5px;
+  margin-bottom: 50px;
+}
+
 
 /* TESTIMONIOS */
 .testimonials {
@@ -257,8 +283,19 @@ body {
 .card {
   background: white;
   padding: 25px;
-  border-radius: 1rem;
+  border-radius: 1.2rem;
   min-height: 160px;
+  transition: all 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.highlight {
+  background: linear-gradient(135deg, var(--tertiary), #8c5cf0);
+  color: white;
 }
 
 /* CTA */
@@ -387,6 +424,9 @@ body {
     background: white;
     padding: 20px;
     border-radius: 1.5rem;
+  }
+  .step-number {
+    margin: 0 0 10px 0;
   }
 
   .testimonials {
