@@ -506,6 +506,15 @@ body {
     grid-template-columns: 1fr;
     padding: 40px 20px;
   }
+  /* CENTRAR TEXTO PRINCIPAL FOOTER */
+.footer div:first-child {
+  align-items: center;
+  text-align: center;
+}
+
+.footer div:first-child p {
+  text-align: center;
+}
 }
 
 /* DESKTOP */
