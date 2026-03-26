@@ -226,11 +226,11 @@ body {
 /* STEPS */
 .steps {
   padding: 100px 60px;
-  text-align: left;
+  text-align: center;
 }
 .steps h2,
 .testimonials h2 {
-  text-align: left;
+  text-align: center;
 }
 
 .step-grid {
