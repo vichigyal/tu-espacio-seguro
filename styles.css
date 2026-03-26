@@ -151,13 +151,14 @@ body {
   position: relative;
 }
 .hero-img img {
-  object-fit: cover;
   width: 100%;
+  height: auto; /* CLAVE */
   border-radius: 2rem;
   transform: rotate(-3deg);
   transition: all 0.4s ease;
   will-change: transform;
   box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+  object-fit: contain; /* opcional pero seguro */
 }
 .floating-card {
   position: absolute;
