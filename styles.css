@@ -226,8 +226,8 @@ body {
 /* STEPS */
 .steps {
   padding: 100px 60px;
-  text-align: center;
 }
+
 .steps h2,
 .testimonials h2 {
   text-align: center;
@@ -280,10 +280,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 12px;
+  min-height: 120px;
 }
 
 /* MOBILE */
 @media (max-width: 768px) {
+
   .navbar {
     padding: 16px 20px;
     backdrop-filter: blur(20px);
@@ -316,7 +319,6 @@ body {
     display: flex;
   }
 
-  /* HERO */
   .hero {
     grid-template-columns: 1fr;
     padding: 60px 20px;
@@ -341,7 +343,10 @@ body {
     border-radius: 1rem;
   }
 
-  /* IMAGEN */
+  .btn-secondary {
+    margin-left: 0;
+  }
+
   .hero-img img {
     transform: none;
     border-radius: 1.5rem;
@@ -352,7 +357,6 @@ body {
     margin-top: 12px;
   }
 
-  /* BENEFITS */
   .benefits {
     flex-direction: column;
     gap: 16px;
@@ -365,7 +369,6 @@ body {
     border-radius: 1rem;
   }
 
-  /* STEPS */
   .steps {
     padding: 80px 20px;
     text-align: left;
@@ -382,7 +385,6 @@ body {
     border-radius: 1.5rem;
   }
 
-  /* TESTIMONIOS */
   .testimonials {
     padding: 80px 20px;
   }
@@ -397,13 +399,11 @@ body {
     padding: 24px;
   }
 
-  /* CTA */
   .cta {
     margin: 40px 20px;
     padding: 50px 20px;
   }
 
-  /* FOOTER */
   .footer {
     grid-template-columns: 1fr;
     padding: 50px 20px;
@@ -411,7 +411,6 @@ body {
     text-align: left;
   }
 
-  /* FIX centrado texto principal */
   .footer div:first-child {
     align-items: center;
     text-align: center;
@@ -424,7 +423,6 @@ body {
 
 /* DESKTOP PRO */
 @media (min-width: 1024px) {
-
   .hero {
     grid-template-columns: 1.1fr 0.9fr;
     padding: 80px 60px;
