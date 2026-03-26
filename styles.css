@@ -226,7 +226,7 @@ body {
 /* STEPS */
 .steps {
   padding: 100px 60px;
-  text-align: center;
+  text-align: left;
 }
 
 .step-grid {
@@ -345,5 +345,8 @@ body {
   .hero-img img:hover {
     transform: rotate(0deg) scale(1.03);
   }
-
+.steps h2,
+.testimonials h2 {
+  text-align: left;
+}
 }
