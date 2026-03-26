@@ -121,7 +121,10 @@ body {
 .hero-img img {
   width: 100%;
   border-radius: 2rem;
-  transform: rotate(-2deg);
+  transform: rotate(-3deg);
+  transition: all 0.4s ease;
+  will-change: transform;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.08);
 }
 
 .floating-card {
@@ -168,11 +171,9 @@ body {
   background: white;
   padding: 25px;
   border-radius: 1rem;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
   min-height: 160px;
 }
 
@@ -198,17 +199,17 @@ body {
   background: var(--surface);
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 @media (max-width: 768px) {
 
-  /* NAVBAR */
   .navbar {
     padding: 15px 20px;
   }
 
   .menu-toggle {
     display: block;
-    font-size: 1.6rem;
   }
 
   .reservar-btn {
@@ -218,15 +219,12 @@ body {
   .nav-links {
     display: none;
     flex-direction: column;
-
     position: absolute;
     top: 65px;
     right: 15px;
-
     background: white;
     padding: 16px;
     border-radius: 12px;
-
     width: 180px;
   }
 
@@ -238,7 +236,6 @@ body {
     display: flex;
   }
 
-  /* HERO */
   .hero {
     grid-template-columns: 1fr;
     padding: 50px 20px;
@@ -274,7 +271,6 @@ body {
     margin-top: 10px;
   }
 
-  /* BENEFITS */
   .benefits {
     flex-direction: column;
     gap: 10px;
@@ -282,7 +278,6 @@ body {
     padding: 30px 20px;
   }
 
-  /* STEPS */
   .steps {
     padding: 60px 20px;
   }
@@ -292,7 +287,6 @@ body {
     gap: 30px;
   }
 
-  /* TESTIMONIOS */
   .testimonials {
     padding: 60px 20px;
   }
@@ -302,32 +296,28 @@ body {
     gap: 20px;
   }
 
-  /* CTA */
   .cta {
     margin: 40px 20px;
     padding: 40px 20px;
     text-align: center;
   }
 
-  /* FOOTER */
   .footer {
     flex-direction: column;
     gap: 20px;
     padding: 40px 20px;
   }
+}
 
 /* =========================
-   FIX GRID DESKTOP
+   DESKTOP FIX
 ========================= */
 @media (min-width: 1024px) {
 
-  /* HERO (más balanceado) */
   .hero {
     grid-template-columns: 1fr 1fr;
-    gap: 80px;
   }
 
-  /* BENEFITS */
   .benefits {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -335,16 +325,13 @@ body {
     text-align: center;
   }
 
-  /* STEPS */
   .step-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
   }
 
-  /* TESTIMONIOS (por si acaso ya lo tienes distinto) */
-  .testimonial-grid {
-    grid-template-columns: repeat(3, 1fr);
+  .hero-img img:hover {
+    transform: rotate(0deg) scale(1.03);
   }
-
 }
