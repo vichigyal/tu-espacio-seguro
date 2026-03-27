@@ -303,6 +303,7 @@ body {
   min-height: 120px;
 }
 /* MOBILE */
+/* MOBILE */
 @media (max-width: 768px) {
   .navbar {
     padding: 16px 20px;
@@ -331,8 +332,6 @@ body {
   .nav-links.active {
     display: flex;
   }
-
-  /* HERO */
   .hero {
     grid-template-columns: 1fr;
     padding: 60px 20px;
@@ -365,7 +364,7 @@ body {
     margin-top: 12px;
   }
 
-  /* ESPACIO UNIFORME ENTRE SECCIONES */
+  /* 🔹 ESPACIO UNIFORME ENTRE SECCIONES */
   .benefits,
   .steps,
   .testimonials,
@@ -377,7 +376,7 @@ body {
     padding-bottom: 40px;
   }
 
-  /* BENEFITS EN COLUMNA */
+  /* 🔹 BENEFITS EN COLUMNA */
   .benefits {
     display: flex;
     flex-direction: column;
@@ -385,31 +384,37 @@ body {
     align-items: center;
   }
 
-  /* STEPS EN COLUMNA */
+  /* 🔹 STEPS EN COLUMNA */
   .step-grid {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    align-items: center; /* centra los steps */
   }
 
   .step {
     padding: 20px;
+    width: 100%;          /* ocupa todo el ancho de la columna */
+    max-width: 600px;     /* limita el ancho igual que la CTA */
+    box-sizing: border-box;
   }
 
-  /* TESTIMONIOS EN COLUMNA */
+  /* 🔹 TESTIMONIOS EN COLUMNA */
   .testimonial-grid {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    align-items: center;
   }
 
-  /* CTA EN ANCHO COMPLETO */
+  /* 🔹 CTA con mismo ancho que los steps */
   .cta {
-    margin: 0;                /* sin márgenes externos que achican el ancho */
-    padding: 40px 20px;       /* espacio interno */
-    border-radius: 1.5rem;
     width: 100%;
-    box-sizing: border-box;   /* para que padding no rompa el ancho */
+    max-width: 600px;     /* igual que los steps */
+    margin: 0 auto;       /* centrado horizontal */
+    padding: 40px 20px;   /* espacio interno */
+    border-radius: 1.5rem;
+    box-sizing: border-box;
   }
 }
 /* DESKTOP PRO */
