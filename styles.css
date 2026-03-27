@@ -197,31 +197,28 @@ body {
 .steps {
   padding: 100px 60px;
 }
-.steps h2,
-.testimonials h2 {
+.steps h2 {
   font-family: 'Manrope';
   font-size: 2.2rem;
   letter-spacing: -0.5px;
-  text-align: center; /* 🔹 centra los títulos */
-  margin-bottom: 50px; /* 🔹 misma distancia al contenido */
+  text-align: center;
+  margin-bottom: 50px;
 }
-.step-grid,
-.testimonial-grid {
+.step-grid {
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  margin-top: 0; /* 🔹 eliminamos márgenes extras */
+  margin-top: 0;
 }
 .step {
   background: white;
   padding: 120px 60px 100px;
-  margin-top: 60px;
   border-radius: 1.5rem;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   position: relative;
 }
-/* NÚMERO (más visible sí o sí) */
 .step::before {
   content: attr(data-step);
   position: absolute;
@@ -240,12 +237,10 @@ body {
   border-radius: 50%;
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
-/* HOVER (más notorio) */
 .step:hover {
   transform: translateY(-8px) scale(1.04);
   box-shadow: 0 25px 50px rgba(0,0,0,0.12);
 }
-/* ICONO un poco más grande */
 .step .icon {
   font-size: 1.8rem;
   margin-bottom: 10px;
@@ -254,6 +249,19 @@ body {
 .testimonials {
   padding: 100px 60px;
 }
+.testimonials h2 {
+  font-family: 'Manrope';
+  font-size: 2.2rem;
+  letter-spacing: -0.5px;
+  text-align: center;
+  margin-bottom: 50px; /* igual que steps */
+}
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+/* CARD */
 .card {
   background: white;
   padding: 25px;
@@ -383,7 +391,7 @@ body {
     padding: 80px 20px;
   }
   .testimonial-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* una columna solo en celular muy pequeño */
     gap: 20px;
   }
   .card {
@@ -427,5 +435,8 @@ body {
   }
   .hero-img img:hover {
     transform: rotate(0deg) scale(1.03);
+  }
+  .testimonial-grid {
+    grid-template-columns: repeat(3, 1fr); /* aseguramos 3 columnas en desktop */
   }
 }
