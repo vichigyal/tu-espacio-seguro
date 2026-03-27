@@ -101,8 +101,8 @@ body {
 .hero {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
-  padding: 100px 60px;
-  gap: 80px;
+  padding: 80px 60px; /* reducido */
+  gap: 60px;
   align-items: center;
 }
 .badge {
@@ -190,30 +190,30 @@ body {
 .benefits {
   display: flex;
   justify-content: space-around;
-  padding: 40px 60px 60px; /* menos espacio abajo */
+  padding: 40px 60px; /* mismo padding que todas las secciones */
+  gap: 40px;
   background: var(--surface);
 }
 /* STEPS */
 .steps {
-  padding: 100px 60px;
+  padding: 40px 60px; /* espacio uniforme entre secciones */
 }
 .steps h2 {
   font-family: 'Manrope';
   font-size: 2.2rem;
   letter-spacing: -0.5px;
   text-align: center;
-  margin-bottom: 50px; /* igual que testimonios */
+  margin-bottom: 40px; /* distancia al contenido uniforme */
 }
 .step-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  margin-top: 0; /* eliminamos espacio extra */
+  margin-top: 0;
 }
 .step {
   background: white;
-  padding: 120px 60px 100px;
-  margin-top: 60px;
+  padding: 80px 40px 60px;
   border-radius: 1.5rem;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -248,11 +248,11 @@ body {
 }
 /* TESTIMONIOS */
 .testimonials {
-  padding: 100px 60px;
+  padding: 40px 60px; /* mismo que steps y benefits */
 }
 .testimonial-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* uno al lado del otro */
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
 .card {
@@ -272,15 +272,14 @@ body {
 }
 /* CTA */
 .cta {
-  margin: 100px 60px;
-  padding: 80px;
+  padding: 40px 60px; /* mismo espacio que todas las secciones */
   border-radius: 2rem;
   background: linear-gradient(135deg, #000, #333);
   color: white;
 }
 /* FOOTER */
 .footer {
-  padding: 80px 60px;
+  padding: 40px 60px; /* uniforme */
   background: var(--surface);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -325,8 +324,8 @@ body {
   }
   .hero {
     grid-template-columns: 1fr;
-    padding: 60px 20px;
-    gap: 40px;
+    padding: 40px 20px;
+    gap: 20px;
     text-align: left;
   }
   .hero h1 {
@@ -354,59 +353,25 @@ body {
     position: static;
     margin-top: 12px;
   }
-  .benefits {
-    flex-direction: column;
-    gap: 16px;
-    padding: 40px 20px 20px; /* menos espacio abajo */
+  .benefits, .steps, .testimonials, .cta {
+    padding: 30px 20px;
   }
-  .benefits div {
-    background: white;
-    padding: 16px;
-    border-radius: 1rem;
-  }
-  .steps {
-    padding: 80px 20px;
-    text-align: left;
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
   .step-grid {
     flex-direction: column;
     gap: 40px;
   }
   .step {
-    background: white;
     padding: 20px;
-    border-radius: 1.5rem;
-  }
-  .step-number {
-    margin: 0 0 10px 0;
-  }
-  .testimonials {
-    padding: 80px 20px;
-  }
-  .testimonial-grid {
-    grid-template-columns: 1fr; /* stacked en móvil */
-    gap: 20px;
-  }
-  .card {
-    border-radius: 1.5rem;
-    padding: 24px;
-  }
-  .cta {
-    margin: 40px 20px;
-    padding: 50px 20px;
   }
   .footer {
     grid-template-columns: 1fr;
-    padding: 50px 20px;
+    padding: 30px 20px;
     gap: 30px;
     text-align: left;
-  }
-  .footer div:first-child {
-    align-items: center;
-    text-align: center;
-  }
-  .footer div:first-child p {
-    text-align: center;
   }
 }
 /* DESKTOP PRO */
