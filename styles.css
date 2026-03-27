@@ -331,6 +331,8 @@ body {
   .nav-links.active {
     display: flex;
   }
+
+  /* HERO */
   .hero {
     grid-template-columns: 1fr;
     padding: 60px 20px;
@@ -363,7 +365,7 @@ body {
     margin-top: 12px;
   }
 
-  /* 🔹 ESPACIO UNIFORME ENTRE SECCIONES */
+  /* ESPACIO UNIFORME ENTRE SECCIONES */
   .benefits,
   .steps,
   .testimonials,
@@ -375,7 +377,7 @@ body {
     padding-bottom: 40px;
   }
 
-  /* 🔹 BENEFITS EN COLUMNA */
+  /* BENEFITS EN COLUMNA */
   .benefits {
     display: flex;
     flex-direction: column;
@@ -383,15 +385,8 @@ body {
     align-items: center;
   }
 
-  /* 🔹 STEPS EN COLUMNA */
+  /* STEPS EN COLUMNA */
   .step-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  /* 🔹 TESTIMONIOS EN COLUMNA */
-  .testimonial-grid {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -399,6 +394,22 @@ body {
 
   .step {
     padding: 20px;
+  }
+
+  /* TESTIMONIOS EN COLUMNA */
+  .testimonial-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* CTA EN ANCHO COMPLETO */
+  .cta {
+    margin: 0;                /* sin márgenes externos que achican el ancho */
+    padding: 40px 20px;       /* espacio interno */
+    border-radius: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;   /* para que padding no rompa el ancho */
   }
 }
 /* DESKTOP PRO */
