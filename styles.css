@@ -303,8 +303,8 @@ body {
   min-height: 120px;
 }
 /* MOBILE */
-/* MOBILE */
 @media (max-width: 768px) {
+  /* NAVBAR */
   .navbar {
     padding: 16px 20px;
     backdrop-filter: blur(20px);
@@ -332,6 +332,8 @@ body {
   .nav-links.active {
     display: flex;
   }
+
+  /* HERO */
   .hero {
     grid-template-columns: 1fr;
     padding: 60px 20px;
@@ -364,7 +366,7 @@ body {
     margin-top: 12px;
   }
 
-  /* 🔹 ESPACIO UNIFORME ENTRE SECCIONES */
+  /* ESPACIO UNIFORME ENTRE SECCIONES */
   .benefits,
   .steps,
   .testimonials,
@@ -374,47 +376,49 @@ body {
     padding-right: 20px;
     padding-top: 40px;
     padding-bottom: 40px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center; /* centra horizontalmente todo */
   }
 
-  /* 🔹 BENEFITS EN COLUMNA */
+  /* BENEFITS EN COLUMNA */
   .benefits {
-    display: flex;
     flex-direction: column;
     gap: 20px;
     align-items: center;
   }
 
-  /* 🔹 STEPS EN COLUMNA */
+  /* STEPS EN COLUMNA */
   .step-grid {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    align-items: center; /* centra los steps */
+    width: 100%;
+    max-width: 600px; /* ancho máximo igual para mobile */
   }
-
   .step {
+    width: 100%;
     padding: 20px;
-    width: 100%;          /* ocupa todo el ancho de la columna */
-    max-width: 600px;     /* limita el ancho igual que la CTA */
     box-sizing: border-box;
   }
 
-  /* 🔹 TESTIMONIOS EN COLUMNA */
+  /* TESTIMONIOS EN COLUMNA */
   .testimonial-grid {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    align-items: center;
+    width: 100%;
+    max-width: 600px; /* mismo ancho que steps */
   }
 
-  /* 🔹 CTA con mismo ancho que los steps */
+  /* CTA del mismo ancho que steps */
   .cta {
     width: 100%;
-    max-width: 600px;     /* igual que los steps */
-    margin: 0 auto;       /* centrado horizontal */
-    padding: 40px 20px;   /* espacio interno */
+    max-width: 600px;
+    padding: 40px 20px;
     border-radius: 1.5rem;
     box-sizing: border-box;
+    text-align: center;
   }
 }
 /* DESKTOP PRO */
