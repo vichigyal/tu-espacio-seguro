@@ -7,19 +7,16 @@
   --text-soft: #3e4949;
   --tertiary: #70469a;
 }
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   background: var(--bg);
   font-family: 'Inter', sans-serif;
   color: var(--text);
 }
-
 /* NAVBAR */
 .navbar {
   display: flex;
@@ -33,7 +30,6 @@ body {
   background: rgba(247, 250, 249, 0.7);
   border-bottom: 1px solid rgba(0,0,0,0.05);
 }
-
 .logo {
   font-family: 'Manrope';
   font-weight: 700;
@@ -41,16 +37,13 @@ body {
   color: var(--text);
   cursor: pointer;
 }
-
 .logo:hover {
   opacity: 0.8;
 }
-
 .nav-links {
   display: flex;
   gap: 25px;
 }
-
 .nav-links a {
   position: relative;
   text-decoration: none;
@@ -58,7 +51,6 @@ body {
   font-weight: 500;
   transition: all 0.25s ease;
 }
-
 .nav-links a::after {
   content: "";
   position: absolute;
@@ -69,23 +61,18 @@ body {
   background: var(--primary);
   transition: width 0.3s ease;
 }
-
 .nav-links a:hover::after {
   width: 100%;
 }
-
 .nav-links a:hover {
   color: var(--text);
 }
-
 .nav-links a.active {
   color: var(--text);
 }
-
 .nav-links a.active::after {
   width: 100%;
 }
-
 /* BOTÓN NAV */
 .reservar-btn {
   padding: 10px 18px;
@@ -96,16 +83,13 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-
 .reservar-btn:hover {
   transform: translateY(-2px) scale(1.02);
   box-shadow: 0 12px 30px rgba(0,0,0,0.2);
 }
-
 .reservar-btn:active {
   transform: scale(0.95);
 }
-
 /* HAMBURGUESA */
 .menu-toggle {
   display: none;
@@ -113,7 +97,6 @@ body {
   background: none;
   border: none;
 }
-
 /* HERO */
 .hero {
   display: grid;
@@ -122,7 +105,6 @@ body {
   gap: 80px;
   align-items: center;
 }
-
 .badge {
   background: var(--surface);
   padding: 8px 14px;
@@ -131,36 +113,30 @@ body {
   margin-bottom: 20px;
   font-size: 0.85rem;
 }
-
 .hero h1 {
   font-family: 'Manrope';
   font-size: 3.5rem;
   line-height: 1.1;
 }
-
 .hero h1 span {
   color: var(--primary);
   font-style: italic;
 }
-
 .hero p {
   margin-top: 20px;
   color: var(--text-soft);
 }
-
 .hero-buttons {
   margin-top: 30px;
 }
-
 /* BOTONES */
 .btn-primary,
 .btn-secondary {
   cursor: pointer;
   transition: all 0.25s ease;
-  text-decoration: none; /* 🔥 quita subrayado */
-  color: inherit; /* 🔥 evita color azul link */
+  text-decoration: none;
+  color: inherit;
 }
-
 .btn-primary {
   padding: 14px 22px;
   border-radius: 999px;
@@ -169,16 +145,13 @@ body {
   color: white;
   display: inline-block;
 }
-
 .btn-primary:hover {
   transform: translateY(-2px) scale(1.02);
   box-shadow: 0 12px 30px rgba(0,0,0,0.2);
 }
-
 .btn-primary:active {
   transform: scale(0.96);
 }
-
 .btn-secondary {
   padding: 14px 22px;
   border-radius: 999px;
@@ -186,21 +159,17 @@ body {
   background: #e6e0ff;
   display: inline-block;
 }
-
 .btn-secondary:hover {
   transform: translateY(-2px) scale(1.02);
   box-shadow: 0 12px 30px rgba(0,0,0,0.2);
 }
-
 .btn-secondary:active {
   transform: scale(0.96);
 }
-
 /* IMAGEN */
 .hero-img {
   position: relative;
 }
-
 .hero-img img {
   width: 100%;
   height: auto;
@@ -209,7 +178,6 @@ body {
   transition: all 0.4s ease;
   box-shadow: 0 20px 60px rgba(0,0,0,0.08);
 }
-
 .floating-card {
   position: absolute;
   bottom: -20px;
@@ -218,7 +186,6 @@ body {
   padding: 12px 18px;
   border-radius: 1rem;
 }
-
 /* BENEFITS */
 .benefits {
   display: flex;
@@ -226,7 +193,10 @@ body {
   padding: 40px;
   background: var(--surface);
 }
-/*STEPS*/
+/* STEPS */
+.steps {
+  margin-top: 60px; /* espacio agregado entre Beneficios y Steps */
+}
 .step {
   background: white;
   padding: 120px 60px 100px;
@@ -237,9 +207,6 @@ body {
   cursor: pointer;
   position: relative;
 }
-
-
-/* NÚMERO (más visible sí o sí) */
 .step::before {
   content: attr(data-step);
   position: absolute;
@@ -261,16 +228,10 @@ body {
 .step-grid {
   margin-top: 40px;
 }
-
-
-
-/* HOVER (más notorio) */
 .step:hover {
   transform: translateY(-8px) scale(1.04);
   box-shadow: 0 25px 50px rgba(0,0,0,0.12);
 }
-
-/* ICONO un poco más grande */
 .step .icon {
   font-size: 1.8rem;
   margin-bottom: 10px;
@@ -286,18 +247,15 @@ body {
 .steps h2 {
   margin-bottom: 60px;
 }
-
 /* TESTIMONIOS */
 .testimonials {
   padding: 100px 60px;
 }
-
 .testimonial-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
-
 .card {
   background: white;
   padding: 25px;
@@ -305,17 +263,14 @@ body {
   min-height: 160px;
   transition: all 0.25s ease;
 }
-
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 40px rgba(0,0,0,0.08);
 }
-
 .highlight {
   background: linear-gradient(135deg, var(--tertiary), #8c5cf0);
   color: white;
 }
-
 /* CTA */
 .cta {
   margin: 100px 60px;
@@ -324,7 +279,6 @@ body {
   background: linear-gradient(135deg, #000, #333);
   color: white;
 }
-
 /* FOOTER */
 .footer {
   padding: 80px 60px;
@@ -334,7 +288,6 @@ body {
   gap: 40px;
   text-align: center;
 }
-
 .footer div {
   display: flex;
   flex-direction: column;
@@ -342,24 +295,19 @@ body {
   gap: 12px;
   min-height: 120px;
 }
-
 /* MOBILE */
 @media (max-width: 768px) {
-
   .navbar {
     padding: 16px 20px;
     backdrop-filter: blur(20px);
     background: rgba(247, 250, 249, 0.8);
   }
-
   .menu-toggle {
     display: block;
   }
-
   .reservar-btn {
     display: none;
   }
-
   .nav-links {
     display: none;
     flex-direction: column;
@@ -373,71 +321,58 @@ body {
     width: 200px;
     gap: 10px;
   }
-
   .nav-links.active {
     display: flex;
   }
-
   .hero {
     grid-template-columns: 1fr;
     padding: 60px 20px;
     gap: 40px;
     text-align: left;
   }
-
   .hero h1 {
     font-size: 2.4rem;
   }
-
   .hero-buttons {
     display: flex;
     flex-direction: column;
     gap: 12px;
   }
-
   .btn-primary,
   .btn-secondary {
     width: 100%;
     padding: 16px;
     border-radius: 1rem;
   }
-
   .btn-secondary {
     margin-left: 0;
   }
-
   .hero-img img {
     transform: none;
     border-radius: 1.5rem;
   }
-
   .floating-card {
     position: static;
     margin-top: 12px;
   }
-
   .benefits {
     flex-direction: column;
     gap: 16px;
     padding: 40px 20px;
   }
-
   .benefits div {
     background: white;
     padding: 16px;
     border-radius: 1rem;
   }
-
   .steps {
     padding: 80px 20px;
     text-align: left;
   }
-
   .step-grid {
     flex-direction: column;
     gap: 40px;
   }
-
   .step {
     background: white;
     padding: 20px;
@@ -446,43 +381,35 @@ body {
   .step-number {
     margin: 0 0 10px 0;
   }
-
   .testimonials {
     padding: 80px 20px;
   }
-
   .testimonial-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-
   .card {
     border-radius: 1.5rem;
     padding: 24px;
   }
-
   .cta {
     margin: 40px 20px;
     padding: 50px 20px;
   }
-
   .footer {
     grid-template-columns: 1fr;
     padding: 50px 20px;
     gap: 30px;
     text-align: left;
   }
-
   .footer div:first-child {
     align-items: center;
     text-align: center;
   }
-
   .footer div:first-child p {
     text-align: center;
   }
 }
-
 /* DESKTOP PRO */
 @media (min-width: 1024px) {
   .hero {
@@ -490,19 +417,16 @@ body {
     padding: 80px 60px;
     gap: 60px;
   }
-
   .benefits {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
   }
-
   .step-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
   }
-
   .hero-img img:hover {
     transform: rotate(0deg) scale(1.03);
   }
