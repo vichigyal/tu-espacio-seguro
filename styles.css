@@ -282,7 +282,9 @@ body {
   text-align: center;
   margin-bottom: 50px;
 }
-
+.steps h2 {
+  margin-bottom: 60px;
+}
 
 /* TESTIMONIOS */
 .testimonials {
