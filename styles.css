@@ -190,21 +190,21 @@ body {
 .benefits {
   display: flex;
   justify-content: space-around;
-  padding: 60px 60px 60px 60px; /* mismo espacio vertical que otras secciones */
+  padding: 60px;
   background: var(--surface);
   gap: 40px;
 }
 /* STEPS */
 .steps {
-  padding: 60px 60px; /* mismo espacio vertical */
+  padding: 60px;
   text-align: center;
 }
 .steps h2 {
   font-family: 'Manrope';
   font-size: 2.2rem;
   letter-spacing: -0.5px;
-  text-align: center; /* centrado */
-  margin-bottom: 40px; /* espacio igual a testimonios */
+  text-align: center;
+  margin-bottom: 40px;
 }
 .step-grid {
   display: grid;
@@ -213,7 +213,7 @@ body {
 }
 .step {
   background: white;
-  padding: 60px 60px 60px;
+  padding: 60px;
   border-radius: 1.5rem;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -248,15 +248,15 @@ body {
 }
 /* TESTIMONIOS */
 .testimonials {
-  padding: 60px 60px; /* mismo espacio vertical */
+  padding: 60px;
   text-align: center;
 }
 .testimonials h2 {
   font-family: 'Manrope';
   font-size: 2.2rem;
   letter-spacing: -0.5px;
-  text-align: center; /* centrado */
-  margin-bottom: 40px; /* mismo espacio que steps */
+  text-align: center;
+  margin-bottom: 40px;
 }
 .testimonial-grid {
   display: grid;
@@ -280,7 +280,7 @@ body {
 }
 /* CTA */
 .cta {
-  margin: 60px 60px;
+  margin: 60px;
   padding: 80px;
   border-radius: 2rem;
   background: linear-gradient(135deg, #000, #333);
@@ -288,7 +288,7 @@ body {
 }
 /* FOOTER */
 .footer {
-  padding: 60px 60px;
+  padding: 60px;
   background: var(--surface);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -362,6 +362,8 @@ body {
     position: static;
     margin-top: 12px;
   }
+
+  /* 🔹 ESPACIO UNIFORME ENTRE SECCIONES */
   .benefits,
   .steps,
   .testimonials,
@@ -372,11 +374,29 @@ body {
     padding-top: 40px;
     padding-bottom: 40px;
   }
-  .step-grid,
-  .testimonial-grid {
-    grid-template-columns: 1fr;
+
+  /* 🔹 BENEFITS EN COLUMNA */
+  .benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  /* 🔹 STEPS EN COLUMNA */
+  .step-grid {
+    display: flex;
+    flex-direction: column;
     gap: 20px;
   }
+
+  /* 🔹 TESTIMONIOS EN COLUMNA */
+  .testimonial-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
   .step {
     padding: 20px;
   }
