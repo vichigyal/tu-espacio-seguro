@@ -376,16 +376,17 @@ body {
     padding-right: 20px;
     padding-top: 40px;
     padding-bottom: 40px;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center; /* centra horizontalmente todo */
   }
 
   /* BENEFITS EN COLUMNA */
   .benefits {
+    display: flex;
     flex-direction: column;
     gap: 20px;
     align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
   }
 
   /* STEPS EN COLUMNA */
@@ -394,12 +395,11 @@ body {
     flex-direction: column;
     gap: 20px;
     width: 100%;
-    max-width: 600px; /* ancho máximo igual para mobile */
+    max-width: 600px;
+    margin: 0 auto;
   }
   .step {
-    width: 100%;
     padding: 20px;
-    box-sizing: border-box;
   }
 
   /* TESTIMONIOS EN COLUMNA */
@@ -408,16 +408,27 @@ body {
     flex-direction: column;
     gap: 20px;
     width: 100%;
-    max-width: 600px; /* mismo ancho que steps */
+    max-width: 600px;
+    margin: 0 auto;
   }
 
-  /* CTA del mismo ancho que steps */
+  /* TITULOS CENTRADOS */
+  .steps h2,
+  .testimonials h2,
+  .cta h2,
+  .benefits h2 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* CTA */
   .cta {
     width: 100%;
     max-width: 600px;
+    margin: 0 auto;
     padding: 40px 20px;
     border-radius: 1.5rem;
-    box-sizing: border-box;
     text-align: center;
   }
 }
